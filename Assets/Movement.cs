@@ -2,19 +2,17 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public Transform playerCamera; // Reference to the player's camera
     public float movementSpeed = 3.0f; // Movement speed
+    public CharacterController characterController; // Reference to the CharacterController component
 
-    private CharacterController characterController; // Reference to the CharacterController component
+
+    public Transform playerCamera; // Reference to the player's camera
     private OVRInput.Controller leftController = OVRInput.Controller.LTouch; // Left Oculus controller
     private OVRInput.Controller rightController = OVRInput.Controller.RTouch; // Right Oculus controller
 
     void Start()
     {
-        // Get the CharacterController component attached to this GameObject
         characterController = GetComponent<CharacterController>();
-
-        // Check if the player camera is assigned, if not, try to find it
         if (playerCamera == null)
         {
             playerCamera = Camera.main.transform;
@@ -23,6 +21,14 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 forward = transform.right * x + transform.forward * z;
+        character.SimpleMove(forward * speed);
+
+        /*
         // Get input from the left Oculus controller thumbstick
         Vector2 thumbstickInput = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, leftController);
 
@@ -31,6 +37,6 @@ public class Movement : MonoBehaviour
         movementDirection.y = 0f; // Ensure the y-component is zero to prevent flying
 
         // Move the player based on the calculated movement direction
-        characterController.Move(movementDirection * movementSpeed * Time.deltaTime);
+        characterController.Move(movementDirection * movementSpeed * Time.deltaTime);*/
     }
 }
