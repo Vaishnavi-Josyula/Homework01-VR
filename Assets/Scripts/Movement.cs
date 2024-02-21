@@ -30,6 +30,8 @@ public class Movement : MonoBehaviour
         
         Vector2 thumbstickInput = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, rightController);
 
+        //Debug.Log("THUMBSTICK");
+
         //Vector2 thumbstickInput2 = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, rightController);
 
 

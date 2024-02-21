@@ -59,7 +59,7 @@ public class RadioMenuController : MonoBehaviour
             Debug.Log("IS PLAYING TRUE, TOGGLE POWER FUNC");
             audioSource.Play();
         }
-
+        Debug.Log("IN TOGGLE POWER FUNC");
         isPlaying = !isPlaying;
     }
 
@@ -69,6 +69,8 @@ public class RadioMenuController : MonoBehaviour
         audioSource.clip = songs[currentSongIndex];
         audioSource.Play();
         isPlaying = true;
+        Debug.Log("PLAYING SONG");
+
     }
 
     public void AdjustVolume(float volume)

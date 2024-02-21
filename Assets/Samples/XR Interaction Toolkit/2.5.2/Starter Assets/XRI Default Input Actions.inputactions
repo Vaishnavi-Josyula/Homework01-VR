@@ -1281,7 +1281,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "A button",
+                    "name": "aButton",
                     "type": "Button",
                     "id": "f4285568-7fbf-47c8-96bc-07c8734fe523",
                     "expectedControlType": "Button",
@@ -1290,7 +1290,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "B button",
+                    "name": "bButton",
                     "type": "Button",
                     "id": "62748cf5-3e49-4f04-8c3b-c9c112f3cf60",
                     "expectedControlType": "Button",
@@ -1538,7 +1538,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "A button",
+                    "action": "aButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -1549,7 +1549,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "B button",
+                    "action": "bButton",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
